@@ -15,13 +15,13 @@ dependencies {
             'org.seleniumhq.selenium:selenium-java:3.141.59',
             'io.github.bonigarcia:webdrivermanager:5.2.1',
             'org.aeonbits.owner:owner:1.0.4',
-            'org.assertj:assertj-core:3.23.1'
-    )
+            'org.assertj:assertj-core:3.23.1',
+            "com.codeborne:selenide:6.15.0",
+            'io.qameta.allure:allure-selenide:2.24.0')
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.1')
 }
 
 test {
     useJUnitPlatform()
-    //-PbaseUrl=https://github.com -Pbrowser=FIREFOX
     systemProperties(System.getProperties())
 }
