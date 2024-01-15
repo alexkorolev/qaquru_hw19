@@ -5,8 +5,7 @@ import org.aeonbits.owner.Config;
 import java.net.URL;
 
 @Config.Sources({
-        "classpath:remote.properties",
-         "classpath:local.properties"
+        "classpath:${loadType}.properties"
 
 })
 public interface WebDriverConfig extends Config

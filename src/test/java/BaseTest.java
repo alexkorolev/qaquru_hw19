@@ -12,10 +12,12 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 
 public class BaseTest {
 
-    static final WebDriverConfig WebDriverConfig = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
 
     @BeforeAll
     public static void beforeMethod(){
+        System.setProperty("loadType","local");
+        WebDriverConfig WebDriverConfig = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+
         baseUrl = WebDriverConfig.getBaseUrl();
         Configuration.browser = WebDriverConfig.getBrowser();
         Configuration.browserSize = WebDriverConfig.browserSize();
