@@ -15,7 +15,6 @@ public class BaseTest {
 
     @BeforeAll
     public static void beforeMethod(){
-        System.setProperty("loadType","local");
         WebDriverConfig WebDriverConfig = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
 
         baseUrl = WebDriverConfig.getBaseUrl();
